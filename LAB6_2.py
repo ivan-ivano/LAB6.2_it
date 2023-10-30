@@ -32,9 +32,10 @@ def replace_elements(lst, n):
 if __name__ == '__main__':
     n = int(input('Введіть кількість елементів списку: '))
     a = generate_list(n)
+    min_index = search_min_element_index(a)
     print(a)
     try:
-        print('Найменший парний елемент:', a[search_min_element_index(a)])
-        print(replace_elements(a, search_min_element_index(a)))
+        print('Найменший парний елемент:', a[min_index])
+        print(replace_elements(a, min_index))
     except TypeError:
         print('Немає парних елементів')
